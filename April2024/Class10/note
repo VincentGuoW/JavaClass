@@ -1,0 +1,19 @@
+Data type:
+
+    Integer
+        byte
+        short
+        int             *********************
+        long
+
+    Floating point
+        float
+        double          *********************
+
+    Character
+        char
+
+
+    Boolean
+        True
+        False
