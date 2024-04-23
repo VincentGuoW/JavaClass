@@ -1,7 +1,8 @@
 package Class3;
 
 
-//Think of Cats, this class is a blue print, it can use for millions of cats, not just one.
+//Think of Cats, this class is a blue print, 
+//It can use for millions of cats, not just one.
 
 
 
