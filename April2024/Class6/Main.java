@@ -1,4 +1,4 @@
-package Class6;
+package April2024.Class6;
 
 public class Main {
     public static void main(String[] args){

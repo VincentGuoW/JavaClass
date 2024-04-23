@@ -1,4 +1,4 @@
-package Class5;
+package April2024.Class5;
 
 public class StaticLearn {
 

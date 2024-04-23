@@ -1,4 +1,4 @@
-package Class2;
+package April2024.Class2;
 //must have the package with folder name^
 
 

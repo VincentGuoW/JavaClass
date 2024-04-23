@@ -1,4 +1,4 @@
-package Class3;
+package April2024.Class3;
 
 
 //Think of Cats, this class is a blue print, 

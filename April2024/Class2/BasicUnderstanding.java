@@ -1,4 +1,4 @@
-package Class2;
+package April2024.Class2;
 //Able to find packages under the Class2 package.
 //For this case, Hello.java is under Class2 package, and Test.java able to use it.(If it's public)
 
