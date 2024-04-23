@@ -11,7 +11,7 @@ public class BasicUnderstanding {
 
     public static void basicUnderstanding(String args[]){
         //public --> Access modifier. Able to access from any other class.
-        //static --> Static method(non-static just empty)
+        //static --> Static method(non-static/instance just empty)
         //void   --> Return type. Do not return any value. 
 
 

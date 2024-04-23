@@ -8,6 +8,8 @@ package Class3;
 
 
 public class Cats {
+    public static final int maxLives = 9;
+
     private static int catsCount = 0;
 
     String name;
@@ -23,9 +25,13 @@ public class Cats {
 
     public Cats(){
         catsCount++;
+        liveRemaining = maxLives;
     }
 
     public static int getCatCount(){
+        //System.out.println(age); 
+        //This sample is wrong. 
+        //static can not use non-static reference.
         return catsCount;
     }
 }
