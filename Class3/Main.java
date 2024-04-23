@@ -5,6 +5,7 @@ public class Main {
         
         System.out.println(Cats.getCatCount());
 
+        //Because Cats() in this case is not static, so we need new instance to use it.
         Cats myCats = new Cats();
         // Cats --> Class!! 類
         // myCats --> Object!! 對象  / Instance 實例
@@ -29,6 +30,6 @@ public class Main {
         //System.out.println(Cats.name);//Name is not static, unable to use.
 
         System.out.println(Cats.getCatCount());
-        System.out.println(myCats.getCatCount());
+        //System.out.println(myCats.getCatCount());
     }
 }
