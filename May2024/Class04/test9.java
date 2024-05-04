@@ -1,6 +1,7 @@
 package May2024.Class04;
 
 import java.util.Random;
+import java.util.Scanner;
 
 public class test9 {
     /*
@@ -26,10 +27,12 @@ public class test9 {
      * 
      */
     public static void main(String[] args) {
-        int[] test=lotteryNumber(7);
-        for (int i = 0; i < test.length; i++) {
-            System.out.println(test[i]);
-        }
+        int[] winningNumber  = lotteryNumber(7);   
+        int[] customerNumber = customerNumber();
+        
+        int redBalls = redBalls(winningNumber,customerNumber);
+        int blueBall = blueBall(winningNumber,customerNumber);
+
     }
 
     public static int[] lotteryNumber(int lottNumberLength) {
@@ -54,8 +57,6 @@ public class test9 {
             if(diffNumber){
                 array[i]=pickNumber;
                 i++;
-            }else{
-                pickNumber = (r.nextInt(33) + 1);
             }
         }
 
@@ -64,4 +65,36 @@ public class test9 {
         return array;
     }
 
+    public static int[] customerNumber(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Please input your number below with space:");
+        String input = sc.nextLine();
+        String[] inputArrayString = input.split(" ");
+        int[] outputArray = new int[inputArrayString.length];
+        for (int i = 0; i < outputArray.length; i++) {
+            outputArray[i]=Integer.parseInt(inputArrayString[i]);
+        }
+        
+        return outputArray;
+    }
+
+    public static int redBalls(int[] winningNumber,int[]customerNumber) {
+        int redBalls = 0;
+        for (int i = 0; i < (winningNumber.length-1); i++) {
+            for (int j = 0; j < (customerNumber.length-1); j++) {
+                if(customerNumber[j]==winningNumber[i]){
+                    redBalls++;
+                    break;
+                }
+            }
+        }
+        return redBalls;
+    }
+    public static int blueBall(int[] winningNumber,int[]customerNumber) {
+        int blueBall=0;
+        if(winningNumber[winningNumber.length-1]==customerNumber[customerNumber.length-1]){
+            blueBall++;
+        }
+        return blueBall;
+    }
 }
