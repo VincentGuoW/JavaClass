@@ -10,7 +10,6 @@ public class VehicleInput {
         System.out.println("Please input your vehicle information below: ");
         boolean moreVehicle = true;
         int inputVehicleAmount = 0;
-        //VehicleInfo[][] vehicleArray = new VehicleInfo[1][];
         ArrayList<VehicleInfo> vehicleArrayList = new ArrayList<>();
         while(moreVehicle){
             VehicleInfo vInfo = new VehicleInfo();
