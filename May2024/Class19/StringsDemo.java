@@ -16,5 +16,6 @@ public class StringsDemo {
         
             System.out.println("The "+ (i+1) +" letter is: "+str.charAt(i) +".");
         }
+        
     }
 }
