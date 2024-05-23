@@ -12,5 +12,6 @@ public class StringDemo4 {
             outputString=outputString+inputString.charAt(i);
         }
         System.out.println(outputString);
+        inputString.length().
     }   
 }
