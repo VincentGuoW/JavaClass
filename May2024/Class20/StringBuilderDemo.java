@@ -6,7 +6,7 @@ public class StringBuilderDemo {
         StringBuilder append()
         StringBuilder reverse()
         length()
-        toString()
+        toString().
          */
 
         String sample="";
