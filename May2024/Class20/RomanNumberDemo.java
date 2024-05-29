@@ -81,7 +81,7 @@ public class RomanNumberDemo {
             case '8'->"VIII";
             case '9'->"IX";
             default ->"";
-        }
+        };
         return str;
     }
 }
