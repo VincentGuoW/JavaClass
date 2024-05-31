@@ -16,7 +16,7 @@ public class ArrayListDemo6 {
         Users user3 = new Users(567,"zhy","09754");
         arrayList.add(user1);
         arrayList.add(user2);
-        arrayList.add(user3);
+        arrayList.add(user3);//test
 
 
        }
