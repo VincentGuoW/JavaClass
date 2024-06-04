@@ -6,6 +6,7 @@
 # import os //This is for check directiory
 # print (os.getcwd())
 
+#test
 #import pandas as pd; 
 
 #excel_file = ".\June2024\YokiProject\PL.xlsx"
@@ -28,7 +29,7 @@ df1=pd.read_excel(main_file, engine='openpyxl')
 df2=pd.read_excel(new_file, engine='openpyxl')
 
 columns_arrays = [
-    ["日期"],
+    ["日期","Time","Date","TIME"],
     ["客户"],
     ["柜号"],
     ["FBA仓库简称"],
