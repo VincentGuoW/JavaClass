@@ -6,7 +6,7 @@
 # import os //This is for check directiory
 # print (os.getcwd())
 
-#test test tstest  test test test
+#test test
 #import pandas as pd; 
 
 #excel_file = ".\June2024\YokiProject\PL.xlsx"
