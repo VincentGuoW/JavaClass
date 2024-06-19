@@ -53,6 +53,17 @@ public class StudentManagement {
                         System.out.println("Please delete stduent");
                         System.out.println("Anything else I can do for you?");
                         break;
+                    case 4:                      
+                        System.out.println("Search");
+                        for (int i = 0; i < StudentInfo.size(); i++) {
+                            System.out.println("ID: "+StudentInfo.get(i).getId()+
+                                               " ; NAME: "+StudentInfo.get(i).getName()+
+                                               " ; AGE: "+StudentInfo.get(i).getAge()+
+                                               " ; ADDRESS: "+StudentInfo.get(i).getAddress()+
+                                               " ; ");
+                            System.out.println("========================================================================");
+                        }
+                        break;
                     case 5:
                         System.out.println("Successful Logged out");
                         logOut=true;
