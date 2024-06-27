@@ -1,10 +1,11 @@
 package June2024.Class02;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class StudentDatabase {
     private ArrayList<StudentInfo> studentInfoList = new ArrayList<StudentInfo>();
-
+    Scanner sc = new Scanner(System.in);
     public StudentDatabase(){
         //st1
         StudentInfo st1 = new StudentInfo(123,"Vincent",28,"313 Road");
@@ -22,4 +23,47 @@ public class StudentDatabase {
     public void addStudent(StudentInfo student){
         studentInfoList.add(student);
     }
+    public void deleteStudent(int inputId){
+        for (int i = 0; i < studentInfoList.size(); i++) {
+            if(inputId==studentInfoList.get(i).getId()){
+                studentInfoList.remove(i);
+                break;
+            }
+        }
+    }
+    public void changeStudent(int inputId){
+        int studentIndex = -1;
+        for (int i = 0; i < studentInfoList.size(); i++) {
+            if(inputId==studentInfoList.get(i).getId()){
+                studentIndex=i;
+                break;
+            }
+        }
+        if(studentIndex>=0){
+            System.out.println("You want to change student( "+inputId+" ) info");
+            int changeId = inputId;
+
+            System.out.println("Please input student NAME that you want to change");
+            String changeName = sc.nextLine();
+            sc.nextLine();
+
+            System.out.println("Please input student AGE that you want to change");
+            int changeAge = sc.nextInt();
+            
+            System.out.println("Please input student ADDRESS that you want to change");
+            String changeAddress = sc.nextLine();
+
+            studentInfoList.get(studentIndex).setId(changeId);
+            studentInfoList.get(studentIndex).setName(changeName);
+            studentInfoList.get(studentIndex).setAge(changeAge);
+            studentInfoList.get(studentIndex).setAddress(changeAddress);
+
+        
+        }else{
+            System.out.println("Wrong ID, no student found.");
+        }
+        
+    }
+
+    
 }

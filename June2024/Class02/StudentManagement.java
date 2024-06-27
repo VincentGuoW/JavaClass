@@ -6,15 +6,7 @@ import java.util.Scanner;
 public class StudentManagement {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        boolean logOut = false;
-        // ArrayList<StudentInfo> StudentInfo = new ArrayList<StudentInfo>();
-        // StudentInfo st1 = new StudentInfo(123, "VINCENT", 28, "313 ROAD ON");
-        // StudentInfo st2 = new StudentInfo(567, "TOM", 31, "FEAW ROAD ON");
-        // StudentInfo st3 = new StudentInfo(890, "YUKI", 29, "1F32 ROAD ON");
-
-        // StudentInfo.add(st1);
-        // StudentInfo.add(st2);
-        // StudentInfo.add(st3);
+        boolean logOut = false;      
         StudentDatabase sd = new StudentDatabase();
         ArrayList<StudentInfo> studentInfoArray = sd.getstudentInfoList();
 
@@ -24,11 +16,12 @@ public class StudentManagement {
             }
             if (sc.hasNextInt()) {
                 int inputNumber = sc.nextInt();
+                int newID=0;
                 switch (inputNumber) {
                     case 1:
                         System.out.println("Please add stduent ID: ");
                         boolean existStudentID = false;
-                        int newID=0;
+                        
                         if(sc.hasNextInt()){
                             newID = sc.nextInt();
                             sc.nextLine();
@@ -70,7 +63,14 @@ public class StudentManagement {
                         break;
                     case 2:
                         System.out.println("Please delete stduent");
-                        System.out.println("Anything else I can do for you?");
+                        newID  = sc.nextInt();
+                        sc.nextLine();
+                        sd.deleteStudent(newID);
+                    case 3:
+                        System.out.println("Please change stduent");
+                        newID  = sc.nextInt();
+                        sc.nextLine();
+                        sd.changeStudent(newID);
                         break;
                     case 4:
                         System.out.println("Search");
