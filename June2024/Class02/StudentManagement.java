@@ -10,6 +10,8 @@ public class StudentManagement {
         StudentDatabase sd = new StudentDatabase();
         ArrayList<StudentInfo> studentInfoArray = sd.getstudentInfoList();
 
+        //test test
+
         while (!logOut) {
             for (int i = 0; i < StartMenu.startMenu().length; i++) {
                 System.out.println(StartMenu.startMenu()[i]);
