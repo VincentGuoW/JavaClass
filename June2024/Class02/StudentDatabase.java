@@ -11,7 +11,7 @@ public class StudentDatabase {
         StudentInfo st1 = new StudentInfo(123,"Vincent",28,"313 Road");
         studentInfoList.add(st1);
         //st2
-        studentInfoList.add(new StudentInfo(123,"Tom",31,"FEAW Road"));
+        studentInfoList.add(new StudentInfo(12314,"Tom",31,"FEAW Road"));
         //st3
         studentInfoList.add(new StudentInfo(890,"Tom",29,"1F31 Road"));
     }
@@ -20,15 +20,33 @@ public class StudentDatabase {
         return studentInfoList;
     }
 
+    public boolean checkStudentExist(int studentID){
+        boolean studentExist = false;
+        for (int i = 0; i < studentInfoList.size(); i++) {
+            if(studentInfoList.get(i).getId()==studentID){
+                studentExist=true;
+                System.out.println("Same ID exist, please try somthing different");
+                break;
+            }
+        }
+        return studentExist;
+    }
+
     public void addStudent(StudentInfo student){
         studentInfoList.add(student);
     }
     public void deleteStudent(int inputId){
+        boolean found = false;
         for (int i = 0; i < studentInfoList.size(); i++) {
             if(inputId==studentInfoList.get(i).getId()){
+                System.out.println("Successly removed " + inputId + " ; Student Name: " + studentInfoList.get(i).getName());
                 studentInfoList.remove(i);
+                found= true;
                 break;
             }
+        }
+        if(!found){
+            System.out.println("There's no match student");
         }
     }
     public void changeStudent(int inputId){
@@ -40,16 +58,17 @@ public class StudentDatabase {
             }
         }
         if(studentIndex>=0){
-            System.out.println("You want to change student( "+inputId+" ) info");
+            System.out.println("You want to change student id "+inputId+"  info");
             int changeId = inputId;
 
             System.out.println("Please input student NAME that you want to change");
             String changeName = sc.nextLine();
-            sc.nextLine();
+           
 
             System.out.println("Please input student AGE that you want to change");
             int changeAge = sc.nextInt();
-            
+            sc.nextLine();
+
             System.out.println("Please input student ADDRESS that you want to change");
             String changeAddress = sc.nextLine();
 

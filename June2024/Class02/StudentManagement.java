@@ -6,11 +6,8 @@ import java.util.Scanner;
 public class StudentManagement {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        boolean logOut = false;      
+        boolean logOut = false;
         StudentDatabase sd = new StudentDatabase();
-        ArrayList<StudentInfo> studentInfoArray = sd.getstudentInfoList();
-
-        //test test
 
         while (!logOut) {
             for (int i = 0; i < StartMenu.startMenu().length; i++) {
@@ -18,59 +15,48 @@ public class StudentManagement {
             }
             if (sc.hasNextInt()) {
                 int inputNumber = sc.nextInt();
-                int newID=0;
+                sc.nextLine();
+                int newID = 0;
                 switch (inputNumber) {
                     case 1:
+                        boolean studentExist = true;
                         System.out.println("Please add stduent ID: ");
-                        boolean existStudentID = false;
-                        
-                        if(sc.hasNextInt()){
+                        if (sc.hasNextInt()) {
                             newID = sc.nextInt();
-                            sc.nextLine();
-                            for (int i = 0; i < studentInfoArray.size(); i++) {
-                                if (studentInfoArray.get(i).getId()== newID) {
-                                    existStudentID = true;
-                                    System.out.println("Same ID exist, please try somthing different");
-                                    break;
-                                } else {
-                                }
-                            }
-                        }else {
+                            studentExist = sd.checkStudentExist(newID);
+                        } else {
                             System.out.println("Wrong input");
-                        }
-                        
-                        
-                            
-                        
-                        
 
-                        if (!existStudentID) {
+                        }
+
+                        if (!studentExist) {
                             StudentInfo stNew = new StudentInfo();
-                    
                             stNew.setId(newID);
+                            sc.nextLine();
+
                             System.out.println("Please input student name: ");
                             stNew.setName(sc.nextLine());
-                            
+
                             System.out.println("Please input student age: ");
                             stNew.setAge(sc.nextInt());
                             sc.nextLine();
-                            
+
                             System.out.println("Please input student address: ");
                             stNew.setAddress(sc.nextLine());
-                            
                             sd.addStudent(stNew);
-                            
-                        }
 
+                        }
                         break;
                     case 2:
-                        System.out.println("Please delete stduent");
-                        newID  = sc.nextInt();
+                        System.out.println("Please input delete stduent ID");
+                        newID = sc.nextInt();
                         sc.nextLine();
                         sd.deleteStudent(newID);
+
+                        break;
                     case 3:
-                        System.out.println("Please change stduent");
-                        newID  = sc.nextInt();
+                        System.out.println("Please input change stduent ID");
+                        newID = sc.nextInt();
                         sc.nextLine();
                         sd.changeStudent(newID);
                         break;
@@ -95,10 +81,11 @@ public class StudentManagement {
                         System.out.println("Only Number 1-5--------------------------------------------------------");
                         break;
                 }
+
             } else {
                 System.out.println("Wrong input--------------------------------------------------------");
             }
-            sc.nextLine();
+
         }
     }
 
