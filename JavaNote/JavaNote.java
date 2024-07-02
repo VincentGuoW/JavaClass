@@ -6,6 +6,9 @@ package JavaNote;
  */
 
 /*
+      sc.next       no need to use extra sc.nextLine to clear the "\n"
+      sc.nextInt    need it 
+      sc.nextLine   no need
   sc.nextLine() doesn't need to worry about left over "/n"; 
   if use sc.nextInt() need sc.nextLine() to clear the left over line change symble"/n""
  */
@@ -32,3 +35,16 @@ package JavaNote;
             letters.append(letterList.charAt(rand.nextInt(letterList.length())));
         }
     */
+
+    /*
+        while(){
+            int sample = xxxx
+        }
+        while(){
+            int sample = xxxx
+        }
+            this is fine cus it's in different{}block.
+        块级作用域（Block Scope）: 变量在定义它的块中有效。块是由大括号 {} 包围的代码段。
+        方法级作用域（Method Scope）: 变量在定义它的方法中有效。
+        类级作用域（Class Scope）: 静态变量在整个类中有效，实例变量在整个对象的生命周期中有效。
+     */

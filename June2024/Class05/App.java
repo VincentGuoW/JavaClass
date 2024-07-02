@@ -22,6 +22,7 @@ public class App {
                 default -> System.out.println();
             }
         }
+        
     }
 
     private static void login(ArrayList<UserBean> userList) {
@@ -35,7 +36,8 @@ public class App {
             System.out.println("Please input username");
             String usernameInput = sc.next();
             boolean flag1 = checkUsername(usernameInput);
-            if (flag1) {
+            boolean flag2 = uniqueUsername(usernameInput,userlList);
+            if (flag1 && flag2) {
                 System.out.println("GOOD");
                 break;
             } else {
@@ -43,7 +45,31 @@ public class App {
                 continue;
             }
         }
+        while(true){
+            System.out.println("Please input password");
+            String password = sc.next();
+            System.out.println("Please input password again");
+            String passwordAgain = sc.next();
+            if(password.equals(passwordAgain)){
+                System.out.println("GOOD");
+                break;
+            }
+        }
+        while(true){
+            System.out.println("Please input ID");
+            String personID = sc.next();
+            boolean flag1 = checkPersonID(personID);
+        }
+    
+    }
 
+    private static boolean uniqueUsername(String usernameInput,ArrayList<UserBean> userList) {
+       for (int i = 0; i < userList.size(); i++) {
+            if(userList.get(i).getUsername().equals(usernameInput)){
+                return false;
+            }
+       }
+        return true;
     }
 
     private static boolean checkUsername(String usernameInput) {
