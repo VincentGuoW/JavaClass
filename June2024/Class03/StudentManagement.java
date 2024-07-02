@@ -1,4 +1,4 @@
-package June2024.Class02;
+package June2024.Class03;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -6,19 +6,17 @@ import java.util.Scanner;
 public class StudentManagement {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        boolean logOut = false;
         StudentDatabase sd = new StudentDatabase();
 
-        while (!logOut) {
-            for (int i = 0; i < StartMenu.startMenu().length; i++) {
-                System.out.println(StartMenu.startMenu()[i]);
-            }
+        loop: while (true) {
+            StartMenu sm = new StartMenu();
+            sm.startMenu();
             if (sc.hasNextInt()) {
                 int inputNumber = sc.nextInt();
                 sc.nextLine();
                 int newID = 0;
                 switch (inputNumber) {
-                    case 1:
+                    case 1 -> {
                         boolean studentExist = true;
                         System.out.println("Please add stduent ID: ");
                         if (sc.hasNextInt()) {
@@ -47,44 +45,47 @@ public class StudentManagement {
 
                         }
                         break;
-                    case 2:
+                    }
+
+                    case 2 -> {
                         System.out.println("Please input delete stduent ID");
                         newID = sc.nextInt();
                         sc.nextLine();
                         sd.deleteStudent(newID);
 
                         break;
-                    case 3:
+                    }
+                    case 3 -> {
                         System.out.println("Please input change stduent ID");
                         newID = sc.nextInt();
                         sc.nextLine();
                         sd.changeStudent(newID);
                         break;
-                    case 4:
+                    }
+                    case 4 -> {
                         System.out.println("Search");
-                        if(sd.getstudentInfoList().size()==0){
-                            System.out.println("No student info");
-                            break;
-                        }
-                        System.out.println("ID\t\tNAME\tAGE\tADDRESS\t");
                         for (int i = 0; i < sd.getstudentInfoList().size(); i++) {
-                            System.out.println("ID: " + sd.getstudentInfoList().get(i).getId() + "\t\t"+
-                                    " ; NAME: " + sd.getstudentInfoList().get(i).getName() +"\t"+
-                                    " ; AGE: " + sd.getstudentInfoList().get(i).getAge() +"\t"+
+                            System.out.println("ID: " + sd.getstudentInfoList().get(i).getId() +
+                                    " ; NAME: " + sd.getstudentInfoList().get(i).getName() +
+                                    " ; AGE: " + sd.getstudentInfoList().get(i).getAge() +
                                     " ; ADDRESS: " + sd.getstudentInfoList().get(i).getAddress() +
                                     " ; ");
                             System.out.println(
                                     "========================================================================");
                         }
                         break;
-                    case 5:
+                    }
+                    case 5 -> {
                         System.out.println("Successful Logged out");
-                        logOut = true;
-                        break;
+                        break loop;
+                        // System.exit(0)
+                        //or we can use System.exit(0) to stop the whole function.
+                    }
 
-                    default:
+                    default -> {
                         System.out.println("Only Number 1-5--------------------------------------------------------");
                         break;
+                    }
                 }
 
             } else {
