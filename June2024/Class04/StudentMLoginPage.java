@@ -83,7 +83,7 @@ public class StudentMLoginPage {
                                 "ID must be the 18 length, cant start with zero, last dig can be x X or number");
                         break;
                     }
-                    // phone = a>
+                    // phone == >
                     System.out.println("Please input your phone");
                     String phoneInput = sc.next();
                     sc.nextLine();
