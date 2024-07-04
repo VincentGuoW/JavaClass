@@ -48,3 +48,12 @@ package JavaNote;
         方法级作用域（Method Scope）: 变量在定义它的方法中有效。
         类级作用域（Class Scope）: 静态变量在整个类中有效，实例变量在整个对象的生命周期中有效。
      */
+
+    /*
+     String return address or strings
+     char[] charArray = {'a','b','c'}
+        System.out.println(charArray.toString()); // Output: [C@some_hash_code
+        
+        String str = new String(charArray);
+        System.out.println(str); // Output: Hello
+     */

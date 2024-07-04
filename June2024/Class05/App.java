@@ -1,6 +1,7 @@
 package June2024.Class05;
 
 import java.util.ArrayList;
+import java.util.Random;
 import java.util.Scanner;
 
 public class App {
@@ -31,6 +32,11 @@ public class App {
 
     private static void register(ArrayList<UserBean> userlList) {
         UserBean newUser = new UserBean();
+        String newUsername="";
+        String newPassword="";
+        String newID="";
+        String newPhone="";
+
         Scanner sc = new Scanner(System.in);
         while (true) {
             System.out.println("Please input username");
@@ -39,6 +45,7 @@ public class App {
             boolean flag2 = uniqueUsername(usernameInput,userlList);
             if (flag1 && flag2) {
                 System.out.println("GOOD");
+                newUsername= usernameInput;
                 break;
             } else {
                 System.out.println("WRONG");
@@ -52,15 +59,63 @@ public class App {
             String passwordAgain = sc.next();
             if(password.equals(passwordAgain)){
                 System.out.println("GOOD");
+                newPassword=password;
                 break;
             }
         }
         while(true){
             System.out.println("Please input ID");
             String personID = sc.next();
-            boolean flag1 = checkPersonID(personID);
+            boolean flag = checkPersonID(personID);
+            if(flag){
+                System.out.println("GOOD");
+                newID=personID;
+                break;
+            }
         }
-    
+        while(true){
+            System.out.println("Please input phone number");
+            String phoneNumber = sc.next();
+            boolean flag = checkPhoneNumber(phoneNumber);
+            if(flag){
+                System.out.println("GOOD");
+                newPhone=phoneNumber;
+                break;
+            }
+        }
+        userlList.add(new UserBean(newUsername,newPassword,newID,newPhone));
+    }
+
+    private static boolean checkPhoneNumber(String phoneNumber) {
+        if(phoneNumber.length()!=11){
+            return false;
+        }
+        if(phoneNumber.startsWith("0")){
+            return false;
+        }
+        for (int i = 0; i < phoneNumber.length(); i++) {
+            char c = phoneNumber.charAt(i);
+            if(c < '0' || c > '9'){
+                return false;
+            }
+        }
+        return true;
+    }
+
+    private static boolean checkPersonID(String personID) {
+        if(personID.length()!=18){
+            return false;
+        }
+        if(personID.startsWith("0")){
+            return false;
+        }
+        for (int i = 0; i < personID.length()-1; i++) {
+            char c = personID.charAt(i);
+            if(!((c>='0' && c <='9')||c=='x'||c=='X')){
+                return false;
+            }
+        }
+        return true;
     }
 
     private static boolean uniqueUsername(String usernameInput,ArrayList<UserBean> userList) {
@@ -108,5 +163,27 @@ public class App {
         userList.add(new UserBean("3", "3", "3", "3"));
         userList.add(new UserBean("4", "4", "4", "4"));
         return userList;
+    }
+
+    private static String getCode(){
+        ArrayList<Character> list = new ArrayList<Character>();
+        for (int i = 0; i < 26; i++) {
+            list.add((char)('a'+i));
+            list.add((char)('A'+i));
+        }
+        StringBuilder sb = new StringBuilder();
+        Random r = new Random();
+        for (int i = 0; i < 4; i++) {
+            sb.append(list.get(r.nextInt(list.size())));
+        }
+        sb.append(r.nextInt(10));
+
+        char[] charArray = sb.toString().toCharArray();
+        int randomIndex = r.nextInt(charArray.length);
+        char temp = charArray[randomIndex];
+        charArray[randomIndex]=charArray[charArray.length-1];
+        charArray[charArray.length-1]=temp;
+        String result = new String(charArray);
+        return result;
     }
 }
