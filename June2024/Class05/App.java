@@ -27,7 +27,20 @@ public class App {
     }
 
     private static void login(ArrayList<UserBean> userList) {
-
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Please input username:");
+        String username= sc.next();
+        System.out.println("Please input password:");
+        String password= sc.next();
+        UserBean userLogin = new UserBean(username, password, null, null)
+        
+        String getCode = getCode();
+        System.out.println("Please input the code "+ getCode);
+        String inputCode = sc.next();
+        if(getCode.equalsIgnoreCase(inputCode)){
+            System.out.println("GOOD");
+            
+        }
     }
 
     private static void register(ArrayList<UserBean> userlList) {
