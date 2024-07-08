@@ -5,7 +5,7 @@ public class Student {
     private int age;
     private String gender;
 
-    public static String teacherName; //shear the same teacherName for all different student
+    public static String teacherName; // shear the same teacherName for all different student
 
     public Student() {
         
