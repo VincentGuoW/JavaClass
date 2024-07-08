@@ -57,3 +57,11 @@ package JavaNote;
         String str = new String(charArray);
         System.out.println(str); // Output: Hello
      */
+
+     /*
+      Static
+        1.shear same value by all 
+            a. Student.teacherName = "xxx" (best)
+            b. S1.teacherName = "xxx"
+            both way will make there rest who ever use Student Javabean get the same teacherName
+     */

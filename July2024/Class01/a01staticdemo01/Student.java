@@ -5,6 +5,8 @@ public class Student {
     private int age;
     private String gender;
 
+    public static String teacherName; //shear the same teacherName for all different student
+
     public Student() {
         
     }
@@ -38,6 +40,6 @@ public class Student {
     }
 
     public void show(){
-        System.out.println(this.name + " , " + this.age + " , " + this.gender);
+        System.out.println(this.name + " , " + this.age + " , " + this.gender + " , " + this.teacherName);
     }
 }
