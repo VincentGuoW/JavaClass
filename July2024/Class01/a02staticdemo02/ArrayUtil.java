@@ -2,7 +2,7 @@ package July2024.Class01.a02staticdemo02;
 
 public class ArrayUtil {
 
-    private  ArrayUtil(){}//make it private, makesure no ArrayUtil1 ArrayUtil2 ...
+    private  ArrayUtil(){}//to make it private, makesure no ArrayUtil1 ArrayUtil2 ...
 
     public static String printArr(int[]arr){ //static for use it.
         StringBuilder sb = new StringBuilder();
