@@ -18,7 +18,7 @@ public class ArrayUtil {
         return sb.toString();
     } 
 
-    public static double getAerage(double[]arr){
+    public static double getAverage(double[]arr){
         double sum=0;
         for (int i = 0; i < arr.length; i++) {
             sum=sum+arr[i];
