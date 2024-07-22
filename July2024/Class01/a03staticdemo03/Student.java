@@ -1,4 +1,4 @@
-package July2024.Class01.a03staticdemo;
+package July2024.Class01.a03staticdemo03;
 
 public class Student {
     private String name;
