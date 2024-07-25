@@ -9,7 +9,7 @@ public class Student {
     //     System.out.println(name + " , " + age +  " , "  + teacherName);
     // }
 
-    //"Student this" ==> address ==> for who ever use it.(s1, s2, s3....)
+    //"Student this" ==> address ==>  who ever use it.(s1, s2, s3....)
     public void infoShow(Student this){
         System.out.println("This address: "+this);
         System.out.println(name + " , " + age +  " , "  + teacherName);
