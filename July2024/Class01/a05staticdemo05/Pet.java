@@ -8,4 +8,11 @@ public class Pet {
         System.out.println("Drink");
     }
     
+    private void test(){
+        System.out.println("This is private");
+    }
+
+    public void callTest(){
+        test();
+    }
 }

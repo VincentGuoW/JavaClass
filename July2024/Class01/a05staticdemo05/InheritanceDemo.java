@@ -5,5 +5,8 @@ public class InheritanceDemo {
         BlackCat cat = new BlackCat();
         cat.color();
         cat.work();
+        
+        Pet pet = new Pet();
+        pet.test();
     }
 }
