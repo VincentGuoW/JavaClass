@@ -1,6 +1,7 @@
 package July2024.Class01.a05staticdemo05;
 
-public class Pet {
+public class Pet extends Object{
+    //The last class will be Ojbect
     public void eat(){
         System.out.println("Eat");
     }

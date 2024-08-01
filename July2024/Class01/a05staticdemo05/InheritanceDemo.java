@@ -7,6 +7,6 @@ public class InheritanceDemo {
         cat.work();
         
         Pet pet = new Pet();
-        pet.test();
+        
     }
 }
