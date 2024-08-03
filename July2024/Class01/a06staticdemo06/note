@@ -36,4 +36,12 @@ public class Dad extends Object{
         System.out.println("number2: " + numberSample2 + ", number3: " + numberSample3);
     }
 
+    public void sample(){
+        int a = 0;
+        System.out.println("a: " + a);
+        System.out.println("a: " + this.a); find this a from class
+        System.out.println("a: " + super.a); find super a from inheritance. from DAD not GrandDad
+
+    }
+
 }
