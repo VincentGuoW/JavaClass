@@ -65,3 +65,12 @@ package JavaNote;
             b. S1.teacherName = "xxx"
             both way will make there rest who ever use Student Javabean get the same teacherName
      */
+
+
+     /*
+      Pack java: name rules ==> com.google.xxxx
+                            ==> com.google.teacher
+                            ==> com.google.student
+
+
+     */
