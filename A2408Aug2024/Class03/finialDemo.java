@@ -8,7 +8,7 @@ public class finialDemo {
 
         final Student s1 = new Student("Vincent",23);
         s1.setAge(11);
-        s1.setName("TOM");
+        s1.setName("TOaM");
         System.out.println(s1.getAge());
         System.out.println(s1.getName());
 
@@ -20,7 +20,7 @@ public class finialDemo {
         }
         
 
-        
+
     }
 }
 
