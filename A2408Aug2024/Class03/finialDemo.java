@@ -6,6 +6,8 @@ public class finialDemo {
         //PI = 1;// This is wrong cus data with finial can't be change
 
 
+        //It's ok to change data inside finial Student s1
+        //Cus finial is for s1's address.
         final Student s1 = new Student("Vincent",23);
         s1.setAge(11);
         s1.setName("TOaM");

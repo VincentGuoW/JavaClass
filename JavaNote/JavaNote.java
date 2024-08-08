@@ -74,3 +74,56 @@ package JavaNote;
 
 
      */
+
+     /*
+      继承父类的内容：
+
+
+成员变量    ==    public 能      ==     private 能
+构造方法    ==    public 不能    ==     private 不能
+成员方式    ==    public 能      ==     private 不能
+
+
+static 和 private 的区别：
+static 表示属于这个类(class)本身 公用的(如学生class 姓名 年龄都不同 但是老师相同 老师加static)
+加了static后 如果要操作的话 需要直接调用总class 而不是每次新建的
+private 表示私有的 不能直接访问 上锁 需要get set 进行访问
+
+public class Dad extends Object{
+
+    成员变量=>
+    public int numberSample1;
+    private int numberSample2;
+    static int numberSample3;
+    //如果父子有相同成员变量 就近原则 所以不推荐 
+
+    构造方法=>
+    //构造方式dad不能继承给son，因为不能用（就如同复制代码一样 下面这串复制过去不能用）
+    public Dad(){}
+    public Dad(int numberSample1, int numberSample2){
+        this.numberSample1 = numberSample1;
+        this.numberSample2 = numberSample2;
+    }
+
+    成员方式=>
+    public void displayInfo() {
+        System.out.println("number1: " + numberSample1 + ", number2: " + numberSample2);
+    }
+
+    private void displayInfo2() {
+        System.out.println("number2: " + numberSample2 + ", number3: " + numberSample3);
+    }
+
+    public void sample(){
+        int a = 0;
+        System.out.println("a: " + a);
+        System.out.println("a: " + this.a); find this a from class
+        System.out.println("a: " + super.a); find super a from inheritance. from DAD not GrandDad
+
+    }
+      */
+
+
+    /*
+    Static class can not use non static variable!
+    */
