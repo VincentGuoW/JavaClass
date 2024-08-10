@@ -1,7 +1,6 @@
 package A2408Aug2024.Class08Plus;
 
 public class DogDemo extends AnimalDemo {
-    private String typeOfAnimal = "DOG";
 
     public DogDemo() {
     }
