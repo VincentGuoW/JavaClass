@@ -11,7 +11,7 @@ public class PingPongPlayer extends PlayerDemo implements EnglishSpeaking{
 
     @Override
     public void job() {
-        System.out.println("Ping Pong player learn how to Ping Pong");
+        System.out.println("Ping Pong player learn Ping Pong");
     }
 
     @Override
