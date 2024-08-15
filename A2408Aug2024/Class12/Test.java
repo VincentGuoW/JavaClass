@@ -3,6 +3,7 @@ package A2408Aug2024.Class12;
 
 public class Test {
     public static void main(String[] args) {
+       
         int[] num1 ={1,3};
         int[] num2 = {2,4};
         System.out.println();
