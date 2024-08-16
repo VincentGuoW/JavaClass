@@ -34,7 +34,7 @@ public class Car {
         //But the outter class no need for it.
         public abstract void show();
         public void show2(){
-            System.out.println("Show 2 engine name");
+            System.out.println("Show 2 engine's name");
             System.out.println(engineName);
             System.out.println();
         }
