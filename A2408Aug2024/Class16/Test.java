@@ -2,6 +2,16 @@ package A2408Aug2024.Class16;
 
 public class Test {
     public static void main(String[] args) {
+        Swim s = new Swim() {
+
+            @Override
+            public void swim() {
+                // TODO Auto-generated method stub
+                throw new UnsupportedOperationException("Unimplemented method 'swim'");
+            }
+            
+        };
+        s.swim();
         
         new Swim() {
             @Override
@@ -25,6 +35,7 @@ public class Test {
 
                 @Override
                 public void eat() {
+                    System.out.println("The diff animal eat");
                  }
             
             }
