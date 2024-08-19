@@ -127,3 +127,6 @@ public class Dad extends Object{
     /*
     Static class can not use non static variable!
     */
+
+
+    //ctrl + shift + R  ==> make select into new method.

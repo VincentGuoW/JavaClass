@@ -6,8 +6,8 @@ import PjPuzzleGame.src.com.vincent.ui.RegisterJFrame;
 
 public class App {
     public static void main(String[] args) {
-        new LoginJFrame();
-        new RegisterJFrame();
+        //new LoginJFrame();
+        //new RegisterJFrame();
         new GameJFrame();
     }
 }
