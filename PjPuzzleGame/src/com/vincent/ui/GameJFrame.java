@@ -1,5 +1,7 @@
 package PjPuzzleGame.src.com.vincent.ui;
 
+import java.util.Random;
+
 import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
@@ -10,11 +12,16 @@ import javax.swing.JMenuItem;
 import javax.swing.WindowConstants;
 
 public class GameJFrame extends JFrame {
+
+    int[][] picLocation = new int[4][4];
+
     public GameJFrame(){
         //Main frame setup
         initJFrame();
         //Menu setup
         initJMenu();
+        //Input data
+        initData();
         //Load pic
         initImage();
 
@@ -22,11 +29,43 @@ public class GameJFrame extends JFrame {
         GameJFrame.super.setVisible(true);//better use this, much more simple
     }
 
+    private void initData() {
+        Random r = new Random();
+        int[] picName = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,0};
+        
+        //random the pic location
+        for (int i = 0; i < picName.length; i++) {
+            int temp = picName[i];
+            int random = r.nextInt(picName.length);
+            picName[i]=picName[random];
+            picName[random]=temp;
+        }
+        //pic location into double array
+        for (int i = 0; i < picName.length; i++) {
+            picLocation[i/4][i%4]=picName[i];
+        }
+
+    }
+
     private void initImage() {
+       /*
        ImageIcon icon1 = new ImageIcon("C:\\Users\\o_ovi\\Desktop\\Java\\PjPuzzleGame\\image\\Cat1\\output_tile_2_2.jpg");
        JLabel jLabel1 = new JLabel(icon1);
        jLabel1.setBounds(0,0,105,105);
         this.getContentPane().add(jLabel1);
+        */
+
+        for (int i = 0; i < 4; i++) {
+            for (int j = 0; j < 4; j++) {
+            int num = picLocation[i][j];
+            ImageIcon icon = new ImageIcon("C:\\Users\\o_ovi\\Desktop\\Java\\PjPuzzleGame\\image\\Meat\\"+num+".jpg");
+            JLabel jLabel = new JLabel(icon);
+            jLabel.setBounds(105*j,105*i,105,105);
+            this.getContentPane().add(jLabel);
+  
+            }
+            
+        }
     }
 
     private void initJMenu() {
