@@ -32,7 +32,7 @@ public class Test2 {
 
             @Override
             public void actionPerformed(ActionEvent e) {
-              System.out.println("Click once");  }
+              System.out.println("Click Once");  }
                 
             }
         );
