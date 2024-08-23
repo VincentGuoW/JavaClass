@@ -40,5 +40,7 @@ public class Test2 {
         jFrame.getContentPane().add(jButton);
 
         jFrame.setVisible(true);
+
+    
     }
 }
