@@ -50,7 +50,8 @@ public class MyJFrame2 extends JFrame implements MouseListener, ActionListener  
        if(source==jButton){
             jButton.setSize(300, 300);
        }else if(source == jButton2){
-        jButton2.setLocation(r.nextInt(500),r.nextInt(500));
+        jButton2.setLocation(r.nextInt(300),r.nextInt(300));
+        System.out.println("action performed done");
 
        }
     }
@@ -73,10 +74,18 @@ public class MyJFrame2 extends JFrame implements MouseListener, ActionListener  
     @Override
     public void mouseEntered(MouseEvent e) {
         System.out.println("Entered"); 
+       
     }
 
     @Override
     public void mouseExited(MouseEvent e) {
         System.out.println("Exited"); 
+        Object source = e.getSource();
+
+        if(source==jButton2){
+            jButton2.setLocation(r.nextInt(500), r.nextInt(500));
+            System.out.println("mouse performed done");
+
+        }
     }
 }
