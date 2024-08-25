@@ -48,7 +48,7 @@ public class MyJFrame3 extends JFrame implements KeyListener  {
       System.out.println("When pressed");
       int code = e.getKeyCode();
       if(code ==65){
-        System.out.println("Now pressing Aaaaa");
+        System.out.println("Now pressing letter a");
       }
 
        }
