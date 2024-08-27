@@ -1,5 +1,8 @@
 package PjPuzzleGame.src.com.vincent.ui;
 
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
+import java.net.http.WebSocket.Listener;
 import java.util.Random;
 
 import javax.imageio.ImageIO;
@@ -12,9 +15,12 @@ import javax.swing.JMenuItem;
 import javax.swing.WindowConstants;
 import javax.swing.border.BevelBorder;
 
-public class GameJFrame extends JFrame {
+public class GameJFrame extends JFrame implements KeyListener   {
 
     int[][] picLocation = new int[4][4];
+    int xlocation;
+    int ylocation;
+
 
     public GameJFrame() {
         // Main frame setup
@@ -44,6 +50,10 @@ public class GameJFrame extends JFrame {
         // pic location into double array
         for (int i = 0; i < picName.length; i++) {
             picLocation[i / 4][i % 4] = picName[i];
+            if(picName[i]==0){
+                xlocation=i/4;
+                ylocation=i%4;
+            }
         }
 
     }
@@ -57,6 +67,7 @@ public class GameJFrame extends JFrame {
          * jLabel1.setBounds(0,0,105,105);
          * this.getContentPane().add(jLabel1);
          */
+        this.getContentPane().removeAll();//remove all previous
 
         for (int i = 0; i < 4; i++) {
             for (int j = 0; j < 4; j++) {
@@ -74,6 +85,7 @@ public class GameJFrame extends JFrame {
         JLabel background = new JLabel(bg);
         background.setBounds(40, 40, 508, 560);
         this.getContentPane().add(background);
+        this.getContentPane().repaint();
 
     }
 
@@ -122,5 +134,48 @@ public class GameJFrame extends JFrame {
         this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);// interface for setDef...
         // setLayout => null; so pic wont show in center, then able to change place
         this.setLayout(null);
+
+        this.addKeyListener(this);
     }
+
+    @Override
+    public void keyTyped(KeyEvent e) {
+     }
+
+    @Override
+    public void keyPressed(KeyEvent e) {
+     }
+
+    @Override
+    public void keyReleased(KeyEvent e) {
+        int code = e.getKeyCode();
+        //System.out.println(code); test the code I click.
+
+        if(code==37){
+            System.out.println("LEFT");
+            picLocation[xlocation][ylocation]=picLocation[xlocation][ylocation+1];
+            picLocation[xlocation][ylocation+1]=0;
+            ylocation++;
+            initImage();
+        }else if(code==38){
+            System.out.println("UP");
+            picLocation[xlocation][ylocation]=picLocation[xlocation+1][ylocation];
+            picLocation[xlocation+1][ylocation]=0;
+            xlocation++;
+            initImage();
+
+        }else if(code==39){
+            System.out.println("RIGHT");
+            picLocation[xlocation][ylocation]=picLocation[xlocation][ylocation-1];
+            picLocation[xlocation][ylocation-1]=0;
+            ylocation--;
+            initImage();
+        }else if(code==40){
+            System.out.println("DOWN");
+            picLocation[xlocation][ylocation]=picLocation[xlocation-1][ylocation];
+            picLocation[xlocation-1][ylocation]=0;
+            xlocation--;
+            initImage();
+        }
+     }
 }
