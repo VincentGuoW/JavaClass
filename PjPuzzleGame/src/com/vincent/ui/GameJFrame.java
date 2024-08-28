@@ -71,7 +71,7 @@ public class GameJFrame extends JFrame implements KeyListener   {
 
         for (int i = 0; i < 4; i++) {
             for (int j = 0; j < 4; j++) {
-                int num = picLocation[i][j];
+                int num = picLocation[i][j];                                                        
                 ImageIcon icon = new ImageIcon(
                         "PjPuzzleGame\\image\\Meat\\" + num + ".jpg");
                 JLabel jLabel = new JLabel(icon);
@@ -144,7 +144,21 @@ public class GameJFrame extends JFrame implements KeyListener   {
 
     @Override
     public void keyPressed(KeyEvent e) {
-     }
+        int code = e.getKeyCode();
+        if(code==65){
+            //Think about clear everything and redo it.
+            System.out.println("Pressing A");
+            this.getContentPane().removeAll();
+            JLabel jLabel = new JLabel(new ImageIcon("PjPuzzleGame\\image\\Meat\\main.jpg"));
+            jLabel.setBounds(83,134,420,420);
+            this.getContentPane().add(jLabel);
+            ImageIcon bg = new ImageIcon("PjPuzzleGame\\image\\sport\\main.jpg");
+            JLabel background = new JLabel(bg);
+            background.setBounds(40, 40, 508, 560);
+            this.getContentPane().add(background);
+            this.getContentPane().repaint();
+        }
+    }
 
     @Override
     public void keyReleased(KeyEvent e) {
@@ -153,12 +167,18 @@ public class GameJFrame extends JFrame implements KeyListener   {
 
         if(code==37){
             System.out.println("LEFT");
+            if(ylocation==3){
+                return; 
+            }
             picLocation[xlocation][ylocation]=picLocation[xlocation][ylocation+1];
             picLocation[xlocation][ylocation+1]=0;
             ylocation++;
             initImage();
         }else if(code==38){
             System.out.println("UP");
+            if(xlocation==3){
+                return; 
+            }
             picLocation[xlocation][ylocation]=picLocation[xlocation+1][ylocation];
             picLocation[xlocation+1][ylocation]=0;
             xlocation++;
@@ -166,15 +186,23 @@ public class GameJFrame extends JFrame implements KeyListener   {
 
         }else if(code==39){
             System.out.println("RIGHT");
+            if(ylocation==0){
+                return; 
+            }
             picLocation[xlocation][ylocation]=picLocation[xlocation][ylocation-1];
             picLocation[xlocation][ylocation-1]=0;
             ylocation--;
             initImage();
         }else if(code==40){
             System.out.println("DOWN");
+            if(xlocation==0){
+                return; 
+            }
             picLocation[xlocation][ylocation]=picLocation[xlocation-1][ylocation];
             picLocation[xlocation-1][ylocation]=0;
             xlocation--;
+            initImage();
+        }else if(code==65){
             initImage();
         }
      }
