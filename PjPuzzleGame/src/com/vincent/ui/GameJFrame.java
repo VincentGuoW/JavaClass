@@ -20,7 +20,13 @@ public class GameJFrame extends JFrame implements KeyListener   {
     int[][] picLocation = new int[4][4];
     int xlocation;
     int ylocation;
-
+    String path = "PjPuzzleGame\\image\\Meat\\";
+    int[][] win = new int[][]{
+        {1,2,3,4},
+        {5,6,7,8},
+        {9,10,11,12},
+        {13,14,15,0},
+    };
 
     public GameJFrame() {
         // Main frame setup
@@ -69,11 +75,16 @@ public class GameJFrame extends JFrame implements KeyListener   {
          */
         this.getContentPane().removeAll();//remove all previous
 
+        if(victory()){
+            JLabel jLabel = new JLabel(new  ImageIcon("PjPuzzleGame\\image\\sport\\Win.png"));
+            jLabel.setBounds(183, 243, 130, 130);
+            this.getContentPane().add(jLabel);
+        }
+
         for (int i = 0; i < 4; i++) {
             for (int j = 0; j < 4; j++) {
                 int num = picLocation[i][j];                                                        
-                ImageIcon icon = new ImageIcon(
-                        "PjPuzzleGame\\image\\Meat\\" + num + ".jpg");
+                ImageIcon icon = new ImageIcon( path + num + ".jpg");
                 JLabel jLabel = new JLabel(icon);
                 jLabel.setBounds(105 * j + 83, 105 * i + 143, 105, 105);
                 jLabel.setBorder(new BevelBorder(BevelBorder.RAISED));
@@ -149,7 +160,7 @@ public class GameJFrame extends JFrame implements KeyListener   {
             //Think about clear everything and redo it.
             System.out.println("Pressing A");
             this.getContentPane().removeAll();
-            JLabel jLabel = new JLabel(new ImageIcon("PjPuzzleGame\\image\\Meat\\main.jpg"));
+            JLabel jLabel = new JLabel(new ImageIcon(path + "main.jpg"));
             jLabel.setBounds(83,134,420,420);
             this.getContentPane().add(jLabel);
             ImageIcon bg = new ImageIcon("PjPuzzleGame\\image\\sport\\main.jpg");
@@ -204,6 +215,21 @@ public class GameJFrame extends JFrame implements KeyListener   {
             initImage();
         }else if(code==65){
             initImage();
+        }else if(code==87){
+            picLocation=win;
+            initImage();
         }
      }
+
+    public boolean victory(){
+        for (int i = 0; i < picLocation.length; i++) {
+            for (int j = 0; j < picLocation[i].length; j++) {
+                if(picLocation[i][j]!=win[i][j]){
+                    return false;
+                }
+            }    
+        }
+        return true;
+    }
+    
 }
