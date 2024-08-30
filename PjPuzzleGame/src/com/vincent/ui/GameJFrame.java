@@ -1,5 +1,6 @@
 package PjPuzzleGame.src.com.vincent.ui;
 
+import java.awt.Color;
 import java.awt.Dialog;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -101,6 +102,7 @@ public class GameJFrame extends JFrame implements KeyListener, ActionListener {
 
         JLabel steps = new JLabel("Steps: " + step);
         steps.setBounds(50, 60, 100, 100);
+        steps.setForeground(Color.white);
         this.getContentPane().add(steps);
 
         for (int i = 0; i < 4; i++) {
