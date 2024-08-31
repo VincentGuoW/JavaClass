@@ -297,8 +297,9 @@ public class GameJFrame extends JFrame implements KeyListener, ActionListener {
             initData();
             initImage();
         } else if (obj == reLoginItem) {
-            this.setVisible(false);
+            //this.setVisible(false);
             new LoginJFrame();
+            this.dispose();
         } else if (obj == closeItem) {
             System.exit(0);
         } else if (obj == aboutUsItem) {
