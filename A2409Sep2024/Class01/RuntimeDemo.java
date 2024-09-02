@@ -22,9 +22,9 @@ public class RuntimeDemo {
 
 
         //exec=> command   (same as run => cmd)
-        r1.exec("notepad");//added throws IOException in this method
-        r1.exec("shutdown -s -t 3600");
-        r1.exec("shutdown -a");
+        Runtime.getRuntime().exec("notepad");//added throws IOException in this method
+        Runtime.getRuntime().exec("shutdown -s -t 3600");
+        Runtime.getRuntime().exec("shutdown -a");
         
 
         //exit virtual machine

@@ -120,6 +120,8 @@ public class GameJFrame extends JFrame implements KeyListener, ActionListener {
         JLabel background = new JLabel(bg);
         background.setBounds(40, 40, 508, 560);
         this.getContentPane().add(background);
+
+        //repaint() will force the contentpane refresh for update
         this.getContentPane().repaint();
 
     }
