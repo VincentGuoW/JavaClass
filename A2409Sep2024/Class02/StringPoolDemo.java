@@ -18,5 +18,8 @@ public class StringPoolDemo {
         String s3 = new String("Sample");
         System.out.println(s1==s2);
         System.out.println(s1==s3);
+
+        s2="New sample";
+        System.out.println(s1);
     }
 }
