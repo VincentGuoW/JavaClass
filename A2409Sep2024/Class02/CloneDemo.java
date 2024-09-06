@@ -4,7 +4,7 @@ public class CloneDemo {
     public static void main(String[] args) throws CloneNotSupportedException {
         System.out.println();
         int[] data = {1,2,3,4,5,6,7,8,9};
-        User u1 = new User(1, "SAM", "PASSWORD", "C\\TEST\\TEST.EXE", data);
+        User u1 = new User(1, "TOM", "PASSWORD", "C\\TEST\\TEST.EXE", data);
 
         Object u2 = u1.clone();
 
