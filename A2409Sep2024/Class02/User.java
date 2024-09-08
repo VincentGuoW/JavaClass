@@ -50,7 +50,7 @@ public class User implements Cloneable{
 
     @Override
     public String toString(){
-        return "Name: " + id + ", Username: " + username +" ,Password: " + password + ", Path: " + path + ", Data: " + arrToString();
+        return "Name: " + id + ", Usernames: " + username +" ,Passwords: " + password + ", Path: " + path + ", Data: " + arrToString();
     }
 
 
