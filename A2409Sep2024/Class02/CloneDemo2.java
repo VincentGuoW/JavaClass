@@ -23,7 +23,7 @@ public class CloneDemo2 {
         System.out.println(u1);
         System.out.println(u2);
 
-        Gson gson = new Gson();
+       
 
     }
 }
