@@ -22,7 +22,14 @@ public class CloneDemo2 {
 
         System.out.println(u1);
         System.out.println(u2);
+        //Gson gson = new Gson();
+        //String s = gson.toJson(u1);
+        //  use Gson package, the toJson method change u1 to String
 
+        //User u3 = gson.fromJson(s,User.class);
+        //  use Gson package, the fromJson method change s back to User.class
+        //System.out.println(u3);
+        //Consider Excel file save to csv file, then revers back to Excel file.
        
 
     }
