@@ -64,8 +64,18 @@ public class User implements Cloneable{
 
     @Override
     protected Object clone() throws CloneNotSupportedException {
-
-        return super.clone();
+        //return super.clone();
+        int[]data = this.data;
+        int[] newData = new int[data.length];
+        for (int i = 0; i < data.length; i++) {
+            newData[i]=data[i];
+        }
+        //Then use the return super.clone(); but give new adress for the data
+        User u =(User) super.clone();
+        u.data=newData;
+        return u;
     }
+
+    
     
 }
