@@ -31,6 +31,13 @@ public class RegularExpressionDemo2 {
     "X{n}"      =>  n times
     "X{n,}"     =>  at least n times
     "X{n,m}"    =>  at least n times but less or equal to m times
+
+    (a|b|c)     => a or b or c
+    (a|b|c)     => (a|b|c)==[abc] it's the same  
+
+    .matches( xxx ) will return pattern;
+    So in filture when we create a pattern to recive .matches
+
  */    public static void main(String[] args) {
         System.out.println("C:\\Users\\o_ovi\\Desktop\\Java\\A2409Sep2024\\Class05\\RegularExpressionDemo.java");
         
