@@ -5,7 +5,7 @@ import java.util.regex.Matcher;
 
 public class WebScrawlerDemo {
     public static void main(String[] args) {
-        String info = "Java is a programming language and computing platform first released by Sun Microsystems in 1995. It has evolved from humble beginnings to power a large share of today's digital world, by providing the Java8 reliable platform upon which many services Java11 and applications are built. New, innovative products and digital services designed for the future Java17 continue to rely on Java, as Java17 well.";
+        String info = "Java is a programming language f and computing platform first released by Sun Microsystems in 1995. It has evolved from humble beginnings to power a large share of today's digital world, by providing the Java8 reliable platform upon which many services Java11 and applications are built. New, innovative products and digital services designed for the future Java17 continue to rely on Java, as Java17 well.";
     
         Pattern p = Pattern.compile("Java\\w{0,2}");
         Matcher m = p.matcher(info);
