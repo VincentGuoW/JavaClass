@@ -11,7 +11,7 @@ public class RegularPlus2 {
                 " digital world, by providing the Java8 reliable platform upon which many" +
                 "services Java11 and 123 applications are built. New, innovative products" +
                 "and digital services designed for the future Java17 continue to rely" +
-                " on Java, as Java17 well. jAva39 Javaaaaaaaaaaaaaaaa";
+                " on Java, as Java17 well. jAva39 Javaaaaaaaaaaaaaaaaaaa";
 
         String regex1 = "((?i)Java)(?=8|11|17)";
         String regex2 = "((?i)Java)(?:8|11|17)";
