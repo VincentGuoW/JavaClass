@@ -35,7 +35,7 @@ public class RegularPlus2 {
         String regex6 ="((?i)Java+?)";
 
 
-        Pattern p = Pattern.compile(regex4);
+        Pattern p = Pattern.compile(regex3);
         Matcher m = p.matcher(info);
         while (m.find()) {
             System.out.print(m.group()+ " ");
