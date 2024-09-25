@@ -14,7 +14,7 @@ public class DateDemo3 {
 
         //1000*60*60*24*365  =  31,536,000,000
         //int max = 2^31 - 1 =   2,147,483,647
-        //So use long to get accurate result
+        //So use long to get accurate result (add L after the number)
         System.out.println(1000L*60*60*24*365);//long type
         System.out.println(1000*60*60*24*365);//int type
     }
