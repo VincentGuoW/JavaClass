@@ -20,10 +20,10 @@ public class DataTest2 {
          */
 
         String startTime = "2023 Year 11 Month 11Day 00:00:00";
-        String endTime = "2023 Year 11 Month 11Day 00:10:00";
-        String player1 = "2023 Year 11 Month 11Day 00:10:00";
-        String player2 = "2023 Year 11 Month 11Day 00:11:00";
-        String player3 = "2023 Year 11 Month 10Day 00:05:00";
+        String endTime   = "2023 Year 11 Month 11Day 00:10:00";
+        String player1   = "2023 Year 11 Month 11Day 00:10:00";
+        String player2   = "2023 Year 11 Month 11Day 00:11:00";
+        String player3   = "2023 Year 11 Month 10Day 00:05:00";
 
 
         Long startTimeLong = getTime(startTime);

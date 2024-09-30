@@ -2,13 +2,19 @@ package A2409Sep2024.Class10;
 
 import java.util.Calendar;
 
-public class CalendarDemo {
+public class CalendarDemo2 {
     public static void main(String[] args) {
         /*
-        1. Calendar can't new, must use geInstance.
-        2. Month 0-11 ==> means 0 is Jan(array put month)
-        3. Week 1 - 7 ==> 1=Sunday.
+            set method==>
+                c.set(Calendar.Month,12)==> month 0-11, if we SET to 12 it will
+                jump to the next year.
+
+            add method==>
+                c.add(Calendar.Month,12)==> add month will add from current month
+            add method==>
+                c.add(Calendar.Month,-1)==> use negetive number for minus a month
          */
+
         System.out.println("Calender Demo:");
         Calendar c = Calendar.getInstance();
         System.out.println(c);//it's an array have all calendar info init[]
@@ -22,8 +28,15 @@ public class CalendarDemo {
         System.out.println(dayOfMonth);
         System.out.println(getWeek(week));
 
-        
+        c.set(Calendar.YEAR, 123);
+        int year2 = c.get(Calendar.YEAR);
+        System.out.println(c);
+        System.out.println(year2);
 
+        c.add(Calendar.YEAR, 123);
+        int year3 = c.get(Calendar.YEAR);
+        System.out.println(c);
+        System.out.println(year3);
 
 
     }
