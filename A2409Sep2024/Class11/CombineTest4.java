@@ -22,10 +22,21 @@ public class CombineTest4 {
         Long days = result/60/60/24/1000;
         System.out.println(days);
 
-        LocalDate bd = LocalDate.of(year, month, month);
+        LocalDate bd = LocalDate.of(year, month, day);
         LocalDate now = LocalDate.now();
         Long days2 = ChronoUnit.DAYS.between(bd, now);
         System.out.println(days2);
+
+        Calendar bdCalender = Calendar.getInstance();
+        bdCalender.set(Calendar.YEAR, year);
+        bdCalender.set(Calendar.MONTH, month-1);
+        bdCalender.set(Calendar.DAY_OF_MONTH, day);
+        long bdCalenderMills = bdCalender.getTimeInMillis();
+        Calendar nowCalender = Calendar.getInstance();
+        long nowCalenderMills = nowCalender.getTimeInMillis();
+        long resultCalender = nowCalenderMills- bdCalenderMills;
+        System.out.println(resultCalender/60/60/24/1000); 
+
 
     }
 }
