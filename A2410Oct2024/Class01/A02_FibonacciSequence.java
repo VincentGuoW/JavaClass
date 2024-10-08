@@ -37,7 +37,7 @@ public class A02_FibonacciSequence {
          //F(k)   = 5;
          //F(k-1) = 3;
          //F(k-2) = 2;
-         int round3Mid = arr[6+2];//==>45; it's  45
+         int round3Mid = arr[6+2];//==>45; it is 45
 
 
     }
