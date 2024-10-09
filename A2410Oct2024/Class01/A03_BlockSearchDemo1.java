@@ -35,7 +35,7 @@ public class A03_BlockSearchDemo1 {
                 return
             }
         }
-        return-1;
+        return -1;
     }
 
     private static int checkBlock(Block[] blockArr, int testNumber){
