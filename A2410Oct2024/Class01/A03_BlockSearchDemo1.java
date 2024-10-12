@@ -32,7 +32,7 @@ public class A03_BlockSearchDemo1 {
     private static int getIndex(Block[] blockArr,int testNumber,int[] arr) {
         for (int i = 0; i < blockArr.length; i++) {
             if(checkBlock(blockArr, testNumber)!=-1){
-                return 1;
+                return 1+1;
             }
         }
         return -1;
