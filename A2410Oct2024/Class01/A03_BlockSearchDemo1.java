@@ -21,19 +21,28 @@ public class A03_BlockSearchDemo1 {
         
         Block[] blockArr = {b1,b2,b3};
         
-        int testNumber =30;
+        int testNumber =66;
 
     
-        getIndex();
+        if(getIndex(blockArr,testNumber,arr)>=0){
+            System.out.println("The index is: "+getIndex(blockArr,testNumber,arr));
+        }else{
+            System.out.println("Not in range");
+        }
 
 
     }
 
     private static int getIndex(Block[] blockArr,int testNumber,int[] arr) {
         for (int i = 0; i < blockArr.length; i++) {
-            if(checkBlock(blockArr, testNumber)!=-1){
-
-                return 1+1;
+            if(checkBlock(blockArr, testNumber)>-1){
+                int blockIndex = checkBlock(blockArr, testNumber);
+                for (int j = blockArr[blockIndex].startIndex; j <= blockArr[blockIndex].endIndex; j++) {
+                    if (arr[j]==testNumber){
+                        return j;
+                    }
+                }
+                return -1;
             }
         }
         return -1;
