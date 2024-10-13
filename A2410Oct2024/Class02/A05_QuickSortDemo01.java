@@ -19,7 +19,14 @@ public class A05_QuickSortDemo01 {
     public static void quickSort(int[] arr, int startIndex, int endIndex){
         int startIdx = startIndex;
         int endIdx = endIndex;
-
+        if(startIdx>endIdx){
+            return; //the last one should be when startIdx == endIdx
+            //So after that,
+            //   quickSort(arr, startIndex, startIdx-1);
+            //Or quickSort(arr, startIdx+1, endIndex);
+            //will make         startIdx   > endIdx
+            //and thats when it need to be stop
+        }
         int baseNumber = arr[startIdx];
         //from start to end check value greater than baseNumber
         //PS:We want everything less than base Number on the left side
@@ -52,6 +59,10 @@ public class A05_QuickSortDemo01 {
         int temp = arr[startIndex];
         arr[startIndex]=arr[startIdx];
         arr[startIdx]=temp;
+
+        quickSort(arr, startIndex, startIdx-1);
+        quickSort(arr, startIdx+1, endIndex);
+
 
     }
 }
