@@ -18,7 +18,7 @@ public class LambdaDemo {
         );
 
         /* 
-        Lambda can only be use on functional interface(only one abstract method)
+        Lambda can only be used on functional interface(only one abstract method)
         method(new Swim2() {
             @Override
             public void swimming2(){
