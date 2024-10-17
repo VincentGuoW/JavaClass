@@ -4,7 +4,7 @@ public class LambdaDemo {
     public static void main(String[] args) {
         //Lambda for Anonymous Inner Class
         //For interface 
-        //Check with @Functionalinterface
+        //Check with the @Functionalinterface
         method(new Swim() {
             @Override
             public void swimming(){
