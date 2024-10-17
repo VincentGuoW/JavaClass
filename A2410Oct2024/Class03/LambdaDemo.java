@@ -3,7 +3,7 @@ package A2410Oct2024.Class03;
 public class LambdaDemo {
     public static void main(String[] args) {
         //Lambda for Anonymous Inner Class
-        //For interface ==>
+        //For interface 
         //Check with @Functionalinterface
         method(new Swim() {
             @Override
