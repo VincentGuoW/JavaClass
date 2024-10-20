@@ -5,7 +5,7 @@ import java.util.Comparator;
 
 public class Test1Demo {
     public static void main(String[] args) {
-        //Build girlfiend Array to save girlfriends
+        //Build girlfiends Array to save girlfriends
         System.out.println();
         Girlfriend g1 = new Girlfriend("AAAAAA", 22, 180);
         Girlfriend g2 = new Girlfriend("BBBBBB", 33, 170);
