@@ -31,5 +31,10 @@ public class Girlfriend {
     public void setHeight(double height) {
         this.height = height;
     }
+
+    @Override
+    public String toString() {
+        return "Girlfriend{Name: "+getName()+ ", Age: "+ getAge()+ ", Height: "+ getHeight();
+    }
     
 }
