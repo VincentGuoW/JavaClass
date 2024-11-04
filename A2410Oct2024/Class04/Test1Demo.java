@@ -6,6 +6,7 @@ import java.util.Comparator;
 public class Test1Demo {
     public static void main(String[] args) {
         //Build girlfiends Array to save girlfriends ==>
+        //Orders large to small ---> age ==> height ==> name
         System.out.println();
         Girlfriend g1 = new Girlfriend("AAAAAA", 22, 180);
         Girlfriend g2 = new Girlfriend("BBBBBB", 33, 170);
@@ -20,8 +21,8 @@ public class Test1Demo {
             public int compare(Girlfriend o1, Girlfriend o2) {
                 double temp = o2.getAge()-o1.getAge();
                 temp = temp==0?o2.getHeight()-o1.getHeight():temp;
-                temp = temp==0?o2.getName().length()-o1.getName().length():temp;
-
+                //temp = temp==0?o2.getName().length()-o1.getName().length():temp;
+                temp = temp==0?o2.getName().compareTo(o1.getName()):temp;
                 if (temp>0){
                     return 1;
                 }else if (temp < 0){

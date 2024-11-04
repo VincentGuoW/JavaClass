@@ -19,7 +19,7 @@ public class Test2Demo {
                 double temp = o2.getAge()-o1.getAge();
                 temp = temp==0?o2.getHeight()-o1.getHeight():temp;
                 temp = temp==0?o2.getName().length()-o1.getName().length():temp;
-
+                //temp = temp==0?o2.getName().compareTo(o1.getName()):temp;
                 if (temp>0){
                     return 1;
                 }else if (temp < 0){
