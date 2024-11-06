@@ -5,6 +5,7 @@ import java.util.Collection;
 
 public class CollectionDemo1 {
     /*
+    test
      * public boolean add (E e)
      * public void clear()
      * public boolean remove(E e)
