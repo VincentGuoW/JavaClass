@@ -1,5 +1,4 @@
 package A2411Nov2024.Class04;
-
 import java.util.ArrayList;
 import java.util.Collection;
 
@@ -12,7 +11,7 @@ public class CollectionDemo1 {
      * public boolean contains (Object obj)
      * public boolean isEmpty()
      * public int size()
-     * 
+     * test
      */
     public static void main(String[] args) {
         System.out.println();
