@@ -10,7 +10,7 @@ public class IteratorDemo {
         2. Pointer will not return after iterator 
         3. while loop can only use next() once each loop
         4. when iterator, can use array method for add or remove
-        
+        test
          */
         Collection <String> coll = new ArrayList<>();
         //
