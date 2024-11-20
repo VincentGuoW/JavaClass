@@ -11,7 +11,7 @@ public class CollectionDemo1 {
      * public boolean contains (Object obj)
      * public boolean isEmpty()
      * public int size()
-     *  test issue
+     * 
      */
     public static void main(String[] args) {
         System.out.println();
