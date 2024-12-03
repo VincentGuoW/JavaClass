@@ -17,7 +17,7 @@ public class LambdaDemo {
         for(String s : list ){
             System.out.println(s);
         }
-        //Fast way to do it ==> list.for ==> TAB test
+        //Fast way to do it ==> list.for ==> TAB 
         
         list.forEach(null);
         
