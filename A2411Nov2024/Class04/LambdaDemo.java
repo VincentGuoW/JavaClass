@@ -20,16 +20,24 @@ public class LambdaDemo {
         }
         //Fast way to do it ==> list.for ==> TAB
         
+        list.forEach((String s)-> {
+                System.out.println("for each: ");
+                System.out.println(s);   
+        });
+
+        //list.forEach(new Consumer<T ==> put in list's type>(){})==>
+        //==>Add umimplementmethod==Get result
         list.forEach(new Consumer<String>() {
 
             @Override
             public void accept(String s) {
-                System.out.println("for each: ");
-                System.out.println(s);
+                // TODO Auto-generated method stub
+                throw new UnsupportedOperationException("Unimplemented method 'accept'");
             }
             
         });
 
+       
             
             
        
