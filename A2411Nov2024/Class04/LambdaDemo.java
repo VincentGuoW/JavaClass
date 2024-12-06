@@ -31,8 +31,7 @@ public class LambdaDemo {
 
             @Override
             public void accept(String s) {
-                
-                throw new UnsupportedOperationException("Unimplemented method 'accept'");
+                System.out.println(s);    
             }
             
         });
