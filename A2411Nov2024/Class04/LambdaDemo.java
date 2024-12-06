@@ -31,7 +31,7 @@ public class LambdaDemo {
 
             @Override
             public void accept(String s) {
-                // TODO Auto-generated method stub
+                
                 throw new UnsupportedOperationException("Unimplemented method 'accept'");
             }
             
