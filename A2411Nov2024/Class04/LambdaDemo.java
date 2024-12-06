@@ -26,7 +26,7 @@ public class LambdaDemo {
         });
 
         //list.forEach(new Consumer<T ==> put in list's type>(){})==>
-        //==>Add umimplementmethod==Get result
+        //==>Add unimplementmethod==Get result
         list.forEach(new Consumer<String>() {
 
             @Override
