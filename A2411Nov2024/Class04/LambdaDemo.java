@@ -20,7 +20,7 @@ public class LambdaDemo {
         }
         //Fast way to do it ==> list.for ==> TAB
         
-        list.forEach((String s)-> {
+        list.forEach( s-> {
                 System.out.println("for each: ");
                 System.out.println(s);   
         });
