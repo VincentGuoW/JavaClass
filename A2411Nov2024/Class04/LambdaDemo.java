@@ -14,16 +14,13 @@ public class LambdaDemo {
         list.add("DDD");
 
         Iterator<String> it = list.iterator();
+        //Fast way to do it ==> list.for ==> TAB
 
         for(String s : list ){
             System.out.println(s);
         }
-        //Fast way to do it ==> list.for ==> TAB
         
-        list.forEach( s-> {
-                System.out.println("for each: ");
-                System.out.println(s);   
-        });
+        
 
         //list.forEach(new Consumer<T ==> put in list's type>(){})==>
         //==>Add unimplementmethod==Get result 
@@ -35,8 +32,26 @@ public class LambdaDemo {
             }
             
         });
+        //Lambda ()->{}
+        //1. default void forEach(Consumer<? super T> action) {..
+            //So forEach can only accept Consumer.
+        //2. Consumer is functionaer interface.
+            //So Consumer only have accept need to override
+        //Use lambda rewrite things doesn't have options.
 
-       
+
+        list.forEach((String s) ->{
+            System.out.println("for each: ");
+            System.out.println(s);  
+        });
+
+        list.forEach( s-> {
+            System.out.println("for each: ");
+            System.out.println(s);   
+        });
+        //If only one line
+        list.forEach( s-> System.out.println(s));   
+
             
             
        
