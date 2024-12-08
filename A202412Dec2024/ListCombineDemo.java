@@ -8,11 +8,13 @@ import java.util.function.Consumer;
 
 public class ListCombineDemo {
     public static void main(String[] args) {
-        List<String> list = new ArrayList<>();
+        List<String> list = new ArrayList<String>();
         list.add("aaa");
         list.add("bbb");
         list.add("ccc");
+        list.add("ddd");
 
+        //Want to remove use iterator==>straight control list
         Iterator<String> it = list.iterator();
         while(it.hasNext()){
             System.out.println(it.next());
@@ -28,7 +30,16 @@ public class ListCombineDemo {
             System.out.println(list.get(i));
         }
 
-        ListIterator
+        //Want to add use ListIterator==>straight control list
+        ListIterator<String> listit = list.listIterator();
+        while (listit.hasNext()) {
+            String str = listit.next();
+            if("bbb".equals(str)){
+                listit.add("qqq");
+            }
+
+        }
+       System.out.println(list);
        
     }
 }
