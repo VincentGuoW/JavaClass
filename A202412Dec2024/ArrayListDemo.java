@@ -13,6 +13,6 @@ public class ArrayListDemo {
         //  ==>"1" means 2 things
         //      1.current amount
         //      2.next element input index
-        
+        //
     }
 }
