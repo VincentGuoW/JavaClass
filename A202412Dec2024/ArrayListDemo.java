@@ -13,6 +13,13 @@ public class ArrayListDemo {
         //  ==>"1" means 2 things
         //      1.current amount
         //      2.next element input index
-        //
+        
+
+        ar1.add("2");
+        ar1.add("3");
+
+        ArrayList<String> ar2 = new ArrayList<>();
+        ar2.addAll(ar1); //add all can add it all in once
+        System.out.println(ar2);
     }
 }
