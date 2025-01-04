@@ -13,7 +13,7 @@ public class ArrayListDemo {
         //  ==>"1" means 2 things
         //      1.current amount
         //      2.next element input index
-        //
+        
 
         ar1.add("2");
         ar1.add("3");
