@@ -21,5 +21,18 @@ public class ArrayListDemo {
         ArrayList<String> ar2 = new ArrayList<>();
         ar2.addAll(ar1); //add all can add it all in once
         System.out.println(ar2);
+
+        /*
+        ArrayList (new)            ==> size:   0 ; new arraylist size is zero
+        ArrayList (add"a")         ==> size:  10 ; add even just one, size turns to 10
+        
+        if
+        ArrayList (add"a"*10)      ==> size: 15 ; add elements at once and over the limit, will turn 1.5 times the size
+
+        elseif
+        ArrayList (add"a"*100)     ==> size: 101 ; add elements at once and even over 1.5 times, will just change to the requirement size
+
+
+        */
     }
 }
