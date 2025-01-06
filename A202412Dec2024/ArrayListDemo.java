@@ -1,6 +1,7 @@
 package A202412Dec2024;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class ArrayListDemo {
     public static void main(String[] args) {
@@ -32,7 +33,12 @@ public class ArrayListDemo {
         elseif
         ArrayList (add"a"*100)     ==> size: 101 ; add elements at once and even over 1.5 times, will just change to the requirement size
 
-
         */
+
+        //ArrayList is a array(Object[] elementData)
+
+        Object[] test = {};
+        System.out.println("test: " + Arrays.toString(test));
+        System.out.println("test size: " +test.length);
     }
 }
