@@ -7,7 +7,7 @@ import java.util.Iterator;
 public class IteratorDemo {
     public static void main(String[] args) {
         //Collection<String> c = new ArrayList<>();
-        //Collection is above arraylist//
+        //Collection is above arraylist
         ArrayList<String> c = new ArrayList<>();
         c.add("aaa");
         c.add("bbb");
