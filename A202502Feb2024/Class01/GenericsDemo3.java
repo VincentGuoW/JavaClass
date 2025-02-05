@@ -8,9 +8,11 @@ public class GenericsDemo3{
         
         System.out.println();
         //Must be Integer, can't be int
-        
+
         //Int       saved in ==> stack
         //Integer   saved in ==> heap
+        ArrayList aList = new ArrayList<>();//ArrayList<E>
+        //Only when set rules for <E>  ==> <E> become Object/ Integer 
         ArrayList<Object> list = new ArrayList<>();
         //ArrayList Generics must be an Object, not fast saving Int in stack.
         ArrayList<Integer> arrayList = new ArrayList<Integer>();
