@@ -4,5 +4,5 @@ public class GenericsMyArrayList<E> {
     Object[] obj = new Object[10];
     int size;
 
-    int test;
+    
 }
