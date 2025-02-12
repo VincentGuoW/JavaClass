@@ -3,7 +3,7 @@ package A202502Feb2024.Class01;
 public class GenericsDemo5 {
     public static void main(String[] args) {
         GenericsMyArrayList<String> mylist = new GenericsMyArrayList<>();
-        //test
+        //
         mylist.add("123");
         mylist.add("abc");
         mylist.add("???");
