@@ -19,5 +19,6 @@ public class GenericsDemo5 {
 
 
         }
+        System.out.println(mylist);
     }
 }
