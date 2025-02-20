@@ -6,19 +6,40 @@ import java.util.ArrayList;
 
 public class GenericsDemo6 {
     public static void main(String[] args) {
-        ArrayList<Grandpa> gpa = new ArrayList<>();
-        ArrayList<Dad> dad = new ArrayList<>();
-        ArrayList<Son> son = new ArrayList<>();
-        ArrayList<student> student = new ArrayList<>();
-        ArrayList<Integer> intlist = new ArrayList<>();
-        ArrayList<?> smaple1 = new ArrayList<>();
-      
-
     };
 
-    public static void method1(ArrayList<?> inpuList) {
+    /*
+     * Major diff between <?> & <E>
+     * 1.
+     * <?> only need once ==>
+     *      public static void method1(ArrayList<?> inpuList) {    }
+     * <E> need twice  ==>
+     *      public static<E> void method2(ArrayList<E> inpuList) {    }
+     * 
+     * 2.
+     * <E> has type so as long as the type remain the same, we can use add
+     * but <?> is just a simple and fast way, works for any time
+     * but they don't record any type.
+     * <?> can NOT use add ==>
+     *          public static void method3(ArrayList<?> inpuList, String e) {
+     *      inpuList.add(e); ERROR ERROR
+     * <E> can use add  ==>
+     *          public static<E> void method4(ArrayList<E> inpuList,E e)
+     *      inpuList.add(e);
+     */
 
+    public static void method1(ArrayList<?> inpuList) {    }
+    public static<E> void method2(ArrayList<E> inpuList) {    }
+    public static void method3(ArrayList<?> inpuList, String e) {  
+    //public static void method3(ArrayList<?> inpuList, ? e) {  ? e can not be use
+        inpuList.add(null);
+        //inpuList.add(e);
     }
+    public static<E> void method4(ArrayList<E> inpuList,E e) {  //E e is fine  
+        inpuList.add(null);
+        inpuList.add(e);
+        
+     }
 
 
 }
