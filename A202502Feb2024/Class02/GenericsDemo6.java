@@ -33,7 +33,8 @@ public class GenericsDemo6 {
     public static void method3(ArrayList<?> inpuList, String e) {  
     //public static void method3(ArrayList<?> inpuList, ? e) {  ? e can not be use
         inpuList.add(null);
-        //inpuList.add(e);
+        //inpuList.add(e); 
+        //we can't add detail value inside since <?> cant be define
     }
     public static<E> void method4(ArrayList<E> inpuList,E e) {  //E e is fine  
         inpuList.add(null);
