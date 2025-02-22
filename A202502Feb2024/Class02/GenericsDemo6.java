@@ -35,6 +35,7 @@ public class GenericsDemo6 {
         inpuList.add(null);
         //inpuList.add(e); 
         //we can't add detail value inside since <?> cant be define
+        //<?> just a fast way but also lost ability as<E>
     }
     public static<E> void method4(ArrayList<E> inpuList,E e) {  //E e is fine  
         inpuList.add(null);
