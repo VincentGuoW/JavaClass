@@ -16,12 +16,22 @@ public class SetDemo {
         boolean r1 = s.add("Tom");
         boolean r2 = s.add("Henry");
         boolean r3 = s.add("Tom");
+         s.add("1");
+         s.add("2");
+         s.add("3");
 
         System.out.println(r1); //true      one and only
         System.out.println(r2); //true      one and only
         System.out.println(r3); //false     already have Tom in set
-        System.out.println(s); //["Tom","Henry"] 
-        //==>First Tom already in will stay, second Tom will get abandoned.
-        // So it's ["Tom","Henry"]  not ["Henry","Tom"] 
+        System.out.println(s); //["1","2","Tom","3","Henry"] 
+        //There's no order, it might also be ["Tom","Henry","1","2","3"] 
+        //But during the same round it will be the same
+        //System.out.println(s); ==>Same
+        //System.out.println(s); ==>Same
+        //System.out.println(s); ==>Same
+        //When using diff JAVA or next turn it might be diff
+        s.add("4");
+        System.out.println(s); //["1","2","Tom","3","4","Henry"] 
+
      }
 }
