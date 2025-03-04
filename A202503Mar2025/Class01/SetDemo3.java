@@ -17,5 +17,9 @@ public class SetDemo3 {
         System.out.println(s2.hashCode());   //2613467
         System.out.println(s22.hashCode());  //2613467
 
+
+        //Hash Collision (rare)
+        System.out.println("abc".hashCode());   //96354     
+        System.out.println("acD".hashCode());   //96354 
     }
 }
