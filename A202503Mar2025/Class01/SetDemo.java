@@ -33,5 +33,6 @@ public class SetDemo {
         s.add("4");
         System.out.println(s); //["1","2","Tom","3","4","Henry"] 
 
+        //s.get() can't use get() ==> no index
      }
 }
