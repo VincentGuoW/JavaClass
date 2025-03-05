@@ -24,8 +24,8 @@ public class SetDemo5 {
         System.out.println(sr3);
         System.out.println(sr4);
         System.out.println(sr5);
-        
-        System.out.println(hs);
+
+        System.out.println(hs); //Tom Sam Billy Henry==> Not in order
         
     }
 }
