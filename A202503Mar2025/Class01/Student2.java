@@ -28,6 +28,7 @@ public class Student2 {
     public Student2() {
 
     }
+    
 
     @Override
     public int hashCode() {
@@ -56,4 +57,11 @@ public class Student2 {
             return false;
         return true;
     }
+
+    @Override
+    public String toString() {
+        return "Name: " + name + " , Age: " + age;
+    }
+
+    
 }
