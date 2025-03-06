@@ -3,6 +3,22 @@ package A202503Mar2025.Class02;
 import java.util.TreeSet;
 
 public class TreeSetDemo3 {
+    /* //Keep use compareTo method, for all the elements indie RedBlackTree
+       // Until this.element found a empty spot/sameElement.
+     * @Override
+     * public int compareTo(Student other) {
+     *      return this.getAge()-other.getAge();
+     * }
+     * 
+     * 
+     * this  ==> Current element
+     * other ==> Other element inside RedBlackTree (Root to Nil)
+     * 
+     * Return:
+     *      > 0 ==> on right side
+     *      < 0 ==> on left  side
+     *      = 0 ==> save value replace/skip
+     */
     public static void main(String[] args) {
         System.out.println();
         TreeSet<Student> st = new TreeSet<>();
