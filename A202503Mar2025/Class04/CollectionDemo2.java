@@ -45,9 +45,7 @@ public class CollectionDemo2 {
             //
             @Override
             public void accept(String t) {
-                // TODO Auto-generated method stub
-                throw new UnsupportedOperationException("Unimplemented method 'accept'");
-            }
+                }
             
         });
     
