@@ -45,7 +45,7 @@ public class CollectionDemo2 {
             //
             @Override
             public void accept(String t) {
-                }
+            }
             
         });
     
