@@ -22,7 +22,7 @@ public class HashMapDemo3 {
             int selectLocation = r.nextInt(4);
             char resultChar = (char)('A'+selectLocation);
             String result = String.valueOf(resultChar);
-            //System.out.println(result);
+            //System.out.println(result); result
             int newVoteAmount = voteLocation.get(result) + 1;
             voteLocation.put(result, newVoteAmount);
         }
