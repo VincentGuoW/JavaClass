@@ -11,6 +11,7 @@ public class HashMapDeepLearning1 {
     public static void main(String[] args) {
         HashMap<String,String> hm = new HashMap<>();
         hm.clear();
+        //TEST
         //They will auto calculate has value for the hash from key and value; 
     }
 }
