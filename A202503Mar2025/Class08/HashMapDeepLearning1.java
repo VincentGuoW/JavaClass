@@ -13,5 +13,7 @@ public class HashMapDeepLearning1 {
         hm.clear();
         //TEST
         //They will auto calculate has value for the hash from key and value; 
+    
+        // xxx instanceof XXX means xxx ==type== XXX;
     }
 }
